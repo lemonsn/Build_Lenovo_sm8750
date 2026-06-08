@@ -431,8 +431,8 @@ jobs:
           cp ./oppo_oplus_realme_sm8750/zram_patch/001-lz4.patch ./common/
           cp ./oppo_oplus_realme_sm8750/zram_patch/lz4armv8.S ./common/lib
           cp ./oppo_oplus_realme_sm8750/zram_patch/002-zstd.patch ./common/
-          wget https://raw.githubusercontent.com/lemonsn/kernel/refs/heads/main/unicode_bypass_fix_6.1.patch
           cd ./common
+          wget https://raw.githubusercontent.com/lemonsn/kernel/refs/heads/main/unicode_bypass_fix_6.1.patch
           git apply -p1 < 001-lz4.patch || true
           patch -p1 < 002-zstd.patch || true
           patch -p1 --forward < unicode_bypass_fix_6.1.patch || true
